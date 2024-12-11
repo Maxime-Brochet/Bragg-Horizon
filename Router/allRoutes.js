@@ -3,8 +3,18 @@ import Route from "./Route.js";
 //Définir ici vos routes
 export const allRoutes = [
   new Route("/", "Accueil", "/pages/home.html"),
-  new Route("/signin", "Connexion", "/pages/auth/signin.html"),
-  new Route("/signup", "Inscription", "/pages/auth/signup.html", "/js/auth/signup.js"),
+  new Route(
+    "/signin",
+    "Connexion",
+    "/pages/auth/signin.html",
+    "/js/auth/signin.js"
+  ),
+  new Route(
+    "/signup",
+    "Inscription",
+    "/pages/auth/signup.html",
+    "/js/auth/signup.js"
+  ),
   new Route("/account", "Mon Compte", "/pages/auth/account.html"),
   new Route(
     "/update-password",
