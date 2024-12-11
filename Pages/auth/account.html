@@ -7,6 +7,16 @@
 <div class="center">
   <form class="container pt-3">
     <div class="mb-2">
+      <label for="PhotoInput" class="form-label">Photo de profil</label>
+      <input
+        type="file"
+        class="form-control border-primary"
+        id="PhotoInput"
+        style="font-family: 'Roboto', serif; font-size: 15"
+      />
+    </div>
+    <br />
+    <div class="mb-2">
       <label for="NameInput" class="form-label">Nom</label>
       <input
         type="text"
@@ -56,6 +66,50 @@
   </div>
   <hr style="width: 50%; text-align: left; margin-left: 0" />
   <div class="center">
-    <a href="/delete-account" class="btn btn-danger"> Supprimer mon compte </a>
+    <a
+      type="button"
+      href="/delete-account"
+      class="btn btn-danger"
+      data-bs-toggle="modal"
+      data-bs-target="#delete-account-modal"
+    >
+      Supprimer mon compte
+    </a>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="delete-account-modal"
+  tabindex="-1"
+  aria-labelledby="delete-account-modalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="delete-account-modalLabel">
+          Suppression de compte
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        Êtes-vous sûr de vouloir supprimer votre compte ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+          Annuler
+        </button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+          Confirmer
+        </button>
+      </div>
+    </div>
   </div>
 </div>
