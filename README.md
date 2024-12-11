@@ -1,10 +1,10 @@
-# BraggWebSite
+# Bragg Horizon
 
-Bienvenue sur le dépôt du site web `BraggWebSite`.
+Bienvenue sur le dépôt du site web `Bragg Horizon`.
 
 ## Description
 
-Bragg Web Site est une vitrine de mon travail. Ce site offre une présentation détaillée de mes projets et compétences.
+Bragg Horizon est une vitrine de mon travail. Ce site offre une présentation détaillée de mes projets et compétences.
 
 ## Fonctionnalités
 
