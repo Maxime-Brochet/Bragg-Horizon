@@ -24,7 +24,8 @@ export const allRoutes = [
   new Route(
     "/update-password",
     "Modifier le mot de passe",
-    "/pages/auth/update-password.html"
+    "/pages/auth/update-password.html",
+    "/js/auth/update-password.js"
   ),
 ];
 
