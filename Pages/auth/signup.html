@@ -13,7 +13,6 @@
         class="form-control border-black"
         id="NameInput"
         style="font-family: 'Roboto', serif; font-size: 15"
-        required
       />
     </div>
     <br />
@@ -24,8 +23,10 @@
         class="form-control border-black"
         id="EmailInput"
         style="font-family: 'Roboto', serif; font-size: 15"
-        required
       />
+      <div class="invalid-feedback">
+        Veuillez saisir une adresse email valide.
+      </div>
     </div>
     <br />
     <div class="mb-2">
@@ -35,40 +36,37 @@
         class="form-control border-black"
         id="PasswordInput"
         style="font-family: 'Roboto', serif; font-size: 15"
-        required
       />
+      <div class="invalid-feedback">
+        Le mot de passe doit contenir : Au moins 8 caractères, une majuscule,
+        une minuscule, un chiffre et un caractère spécial.
+      </div>
+      <div class="valid-feedback">Mot de passe valide.</div>
     </div>
     <br />
     <div class="mb-2">
-      <label for="ValidatePasswordInput" class="form-label">Validez votre mot de passe</label>
+      <label for="ValidatePasswordInput" class="form-label"
+        >Validez votre mot de passe</label
+      >
       <input
         type="password"
         class="form-control border-black"
         id="ValidatePasswordInput"
         style="font-family: 'Roboto', serif; font-size: 15"
-        required
       />
-    </div>
-    <br />
-    <div class="form-check">
-      <input
-        class="form-check-input border-black"
-        type="checkbox"
-        value=""
-        id="RuleAcceptCheck"
-        required
-      />
-      <label class="form-check-label" for="RuleAcceptCheck">
-        J'accepte les règles d'utilisation du site
-      </label>
+      <div class="invalid-feedback">
+        Le mot de passe doit être identique à celui saisi précédemment.
+      </div>
     </div>
     <br />
     <div class="center">
-      <button id="SubmitButton" type="submit" class="btn btn-primary">Inscription</button>
+      <button id="SubmitButton" type="submit" class="btn btn-primary">
+        Inscription
+      </button>
     </div>
     <br />
     <div>
-      <p>Vous avez déjà un compte ? <a href="/signin">Connectez-vous</a></
+      <p>Vous avez déjà un compte ? <a href="/signin">Connectez-vous</a></p>
     </div>
   </form>
 </div>
