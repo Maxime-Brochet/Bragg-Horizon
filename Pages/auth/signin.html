@@ -27,21 +27,14 @@
       />
       <a href="/forgot-password">Mot de passe oublié ?</a>
     </div>
-    <br />
-    <div class="form-check">
-      <input
-        class="form-check-input border-black"
-        type="checkbox"
-        value=""
-        id="RememberMeCheck"
-      />
-      <label class="form-check-label" for="RememberMeCheck">
-        Se souvenir de moi
-      </label>
+    <div class="mb-2">
+      <label class="empty" id="feedback-signin"></label>
+      <div class="invalid-feedback">
+        Le mot de passe ou l'email est incorrect
+      </div>
     </div>
-    <br />
     <div class="center">
-      <button id="SubmitButton" type="submit" class="btn btn-primary">
+      <button id="SubmitButton" type="button" class="btn btn-primary">
         Connexion
       </button>
     </div>

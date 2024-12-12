@@ -1,52 +1,30 @@
-//Implémentation de la fonction de validation du formulaire de connexion
 const submitButton = document.getElementById("SubmitButton");
 
 const inputEmail = document.getElementById("EmailInput");
 const inputPassword = document.getElementById("PasswordInput");
+const feedback = document.getElementById("feedback-signin");
 
-inputEmail.addEventListener("keyup", validateForm);
-inputPassword.addEventListener("keyup", validateForm);
+//Implémentation de la fonction de vérification des identifiants
 
-validateForm();
+submitButton.addEventListener("click", checkCredentials);
 
-function validateForm() {
-  const EmailOk = validateEmail(inputEmail);
-  const PasswordOk = validatePassword(inputPassword);
+function checkCredentials() {
+  if (
+    //TODO: Appeler l'API pour vérifier les identifiants
+    inputEmail.value == "test@test.fr" &&
+    inputPassword.value == "Test1234!"
+  ) {
+    const token = "luzyz04l4epcshjhkxw767dr0loe1lsq"; //TODO: Récupérer le token de l'utilisateur
+    setToken(token);
+    setCookie("role", "admin", 7);
 
-  if (EmailOk && PasswordOk) {
-    submitButton.disabled = false;
+    window.location.replace("/");
   } else {
-    submitButton.disabled = true;
+    alert("Identifiants incorrects");
+    inputEmail.classList.add("is-invalid");
+    inputPassword.classList.add("is-invalid");
+    feedback.classList.add("is-invalid");
   }
 }
 
-function validateEmail(input) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const mailUser = input.value;
-  if (mailUser.match(emailRegex)) {
-    input.classList.add("is-valid");
-    input.classList.remove("is-invalid");
-    return true;
-  } else {
-    input.classList.add("is-invalid");
-    input.classList.remove("is-valid");
-    return false;
-  }
-}
-
-function validatePassword(input) {
-  const passwordRegex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/;
-  const password = input.value;
-  if (password.match(passwordRegex)) {
-    input.classList.add("is-valid");
-    input.classList.remove("is-invalid");
-    return true;
-  } else {
-    input.classList.add("is-invalid");
-    input.classList.remove("is-valid");
-    return false;
-  }
-}
-
-//Fin de l'implémentation de la fonction de validation du formulaire de connexion
+//Fin de l'implémentation de la fonction de vérification des identifiants
